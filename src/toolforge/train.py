@@ -14,6 +14,17 @@ def load_yaml(path: Path) -> dict[str, Any]:
         return yaml.safe_load(handle)
 
 
+def to_prompt_completion(example: dict[str, Any]) -> dict[str, Any]:
+    """Convert one conversational row to TRL's completion-loss format."""
+    messages = example.get("messages", [])
+    if len(messages) < 2 or messages[-1].get("role") != "assistant":
+        raise ValueError("Each training example must end with an assistant message")
+    return {
+        "prompt": messages[:-1],
+        "completion": [messages[-1]],
+    }
+
+
 def train(model_config: Path, training_config: Path) -> None:
     try:
         import torch
@@ -53,6 +64,11 @@ def train(model_config: Path, training_config: Path) -> None:
         "json",
         data_files={"train": "data/train.jsonl", "validation": "data/validation.jsonl"},
     )
+    data = data.map(
+        to_prompt_completion,
+        remove_columns=data["train"].column_names,
+        desc="Converting conversations to prompt/completion examples",
+    )
     lora = LoraConfig(
         r=int(train_cfg["lora_rank"]),
         lora_alpha=int(train_cfg["lora_alpha"]),
@@ -82,7 +98,8 @@ def train(model_config: Path, training_config: Path) -> None:
         bf16=compute_dtype == torch.bfloat16,
         fp16=compute_dtype == torch.float16,
         gradient_checkpointing=True,
-        assistant_only_loss=True,
+        assistant_only_loss=False,
+        completion_only_loss=True,
         packing=False,
         report_to="none",
         seed=int(train_cfg["seed"]),
