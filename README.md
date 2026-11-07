@@ -66,7 +66,7 @@ Training is intended for Google Colab or another machine with a compatible NVIDI
 3. Select **Runtime → Change runtime type → T4 GPU**.
 4. Run the cells in order. When prompted, upload `toolforge-colab.zip`.
 
-The notebook unpacks the project, installs its training dependencies, regenerates and validates the dataset, then starts QLoRA training. The equivalent commands are:
+The notebook unpacks the project, installs its training dependencies, regenerates and validates the dataset, then starts QLoRA training. Its final cell downloads the trained adapter as `toolforge-qwen3-0.6b-adapter.zip`. The equivalent commands are:
 
 ```bash
 pip install -e '.[training]'
