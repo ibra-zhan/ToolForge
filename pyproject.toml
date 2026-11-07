@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "toolforge"
+version = "0.1.0"
+description = "A reproducible experiment for fine-tuning small LLMs to emit reliable tool calls"
+readme = "README.md"
+requires-python = ">=3.11,<3.15"
+dependencies = [
+  "pydantic>=2.10,<3",
+  "PyYAML>=6.0,<7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3,<10", "pytest-cov>=6,<8"]
+inference = ["torch>=2.4", "transformers>=4.51", "accelerate>=1.2", "peft>=0.14"]
+training = [
+  "torch>=2.4",
+  "transformers>=4.51",
+  "accelerate>=1.2",
+  "datasets>=3.2",
+  "trl>=0.15",
+  "peft>=0.14",
+  "bitsandbytes>=0.45",
+]
+demo = ["gradio>=5.12"]
+
+[project.scripts]
+toolforge-generate = "toolforge.dataset_generator:main"
+toolforge-validate = "toolforge.dataset_validator:main"
+toolforge-evaluate = "toolforge.evaluate:main"
+toolforge-train = "toolforge.train:main"
+toolforge-demo = "toolforge.app:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/toolforge"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+

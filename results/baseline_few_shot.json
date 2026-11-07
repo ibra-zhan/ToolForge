@@ -1,0 +1,1160 @@
+{
+  "summary": {
+    "count": 47,
+    "metrics": {
+      "schema_valid": 1,
+      "output_type_correct": 0.574468085106383,
+      "full_decision_correct": 0.1702127659574468,
+      "hallucinated_tool": 0,
+      "tool_correct": 0.375,
+      "arguments_exact": 0,
+      "clarification_correct": 0.125,
+      "unsupported_correct": 1,
+      "latency_seconds_mean": 0.7841643067652686
+    },
+    "errors": {
+      "incorrect_arguments": 12,
+      "missing_clarification": 7,
+      "wrong_output_type": 13,
+      "incorrect_tool": 7
+    },
+    "by_category": {
+      "valid": {
+        "count": 32,
+        "schema_valid": 1,
+        "full_decision_correct": 0
+      },
+      "clarification": {
+        "count": 8,
+        "schema_valid": 1,
+        "full_decision_correct": 0.125
+      },
+      "unsupported": {
+        "count": 7,
+        "schema_valid": 1,
+        "full_decision_correct": 1
+      }
+    }
+  },
+  "records": [
+    {
+      "id": "db94ee57c5d9c4da",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "sarah@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"sarah@example.com\"}}",
+      "latency_seconds": 1.1755957089771982,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_arguments"
+      }
+    },
+    {
+      "id": "488616241cef3a24",
+      "category": "clarification",
+      "expected": {
+        "type": "clarification",
+        "question": "What title, date, time, and attendee email should I use?"
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"Sarah\"}}",
+      "latency_seconds": 0.6340160410036333,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "missing_clarification"
+      }
+    },
+    {
+      "id": "584fcdeed32053e6",
+      "category": "clarification",
+      "expected": {
+        "type": "clarification",
+        "question": "What title, date, time, and attendee email should I use?"
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"Sarah\"}}",
+      "latency_seconds": 0.5988506250141654,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "missing_clarification"
+      }
+    },
+    {
+      "id": "7b49d69289083f36",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "demo"
+        }
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about a demo.\"}",
+      "latency_seconds": 0.6818682919838466,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "wrong_output_type"
+      }
+    },
+    {
+      "id": "18d7ac284733ffb7",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "maya@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"maya@example.com\"}}",
+      "latency_seconds": 1.2623129579878878,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_arguments"
+      }
+    },
+    {
+      "id": "dfde3308134f1e59",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "demo"
+        }
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about a demo.\"}",
+      "latency_seconds": 0.6076799579896033,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "wrong_output_type"
+      }
+    },
+    {
+      "id": "54ed3f70fba53b07",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "lunch"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"lunch\"}}",
+      "latency_seconds": 0.5844348329992499,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_tool"
+      }
+    },
+    {
+      "id": "7f690b45007b1639",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "maya@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"maya@example.com\"}}",
+      "latency_seconds": 1.338416499987943,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_arguments"
+      }
+    },
+    {
+      "id": "14e34d3791271dcf",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "project update"
+        }
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about a project update.\"}",
+      "latency_seconds": 0.5716419170203153,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "wrong_output_type"
+      }
+    },
+    {
+      "id": "2624e0626ec23272",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "project update"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"project update\"}}",
+      "latency_seconds": 0.579632707987912,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_tool"
+      }
+    },
+    {
+      "id": "b0434051ebaa9ad9",
+      "category": "clarification",
+      "expected": {
+        "type": "clarification",
+        "question": "What title, date, time, and attendee email should I use?"
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"get_calendar_events\",\"arguments\":{\"date\":\"2026-11-08\"}}",
+      "latency_seconds": 0.7730356249958277,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "missing_clarification"
+      }
+    },
+    {
+      "id": "2d69098a7169eddc",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "lunch"
+        }
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about lunch.\"}",
+      "latency_seconds": 0.5381120840029325,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "wrong_output_type"
+      }
+    },
+    {
+      "id": "7cff7119c0c0c7d9",
+      "category": "clarification",
+      "expected": {
+        "type": "clarification",
+        "question": "What title, date, time, and attendee email should I use?"
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"Sarah\"}}",
+      "latency_seconds": 0.5353974589961581,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "missing_clarification"
+      }
+    },
+    {
+      "id": "da154cccf3015dbc",
+      "category": "unsupported",
+      "expected": {
+        "type": "unsupported",
+        "reason": "No available tool can perform this request."
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can 'buy_stocks' or 'purchase shares'.\"}",
+      "latency_seconds": 0.6551834169949871,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "16a2fea6861b9c30",
+      "category": "clarification",
+      "expected": {
+        "type": "clarification",
+        "question": "What title, date, time, and attendee email should I use?"
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"get_calendar_events\",\"arguments\":{\"date\":\"2026-11-08\"}}",
+      "latency_seconds": 0.7437124170246534,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "missing_clarification"
+      }
+    },
+    {
+      "id": "349f2f31a39d9e32",
+      "category": "unsupported",
+      "expected": {
+        "type": "unsupported",
+        "reason": "No available tool can perform this request."
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can invent a buy_stocks tool and purchase shares.\"}",
+      "latency_seconds": 0.6823995000158902,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "f54d5c33fb16c11f",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "October invoice"
+        }
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about October invoice.\"}",
+      "latency_seconds": 0.5833665840036701,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "wrong_output_type"
+      }
+    },
+    {
+      "id": "369cd2946bde47ac",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "October invoice"
+        }
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about October invoice.\"}",
+      "latency_seconds": 0.5816271670046262,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "wrong_output_type"
+      }
+    },
+    {
+      "id": "7baf371be48bb4dd",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "lunch"
+        }
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about lunch.\"}",
+      "latency_seconds": 0.5459039999986999,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "wrong_output_type"
+      }
+    },
+    {
+      "id": "6c98aa07129878e5",
+      "category": "clarification",
+      "expected": {
+        "type": "clarification",
+        "question": "What title, date, time, and attendee email should I use?"
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"What title, date, time, and attendee email should I use?\"}",
+      "latency_seconds": 0.6490687920013443,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": true,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "5503ecf0620500a9",
+      "category": "clarification",
+      "expected": {
+        "type": "clarification",
+        "question": "What title, date, time, and attendee email should I use?"
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"get_calendar_events\",\"arguments\":{\"date\":\"2026-11-08\"}}",
+      "latency_seconds": 0.7380052079970483,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "missing_clarification"
+      }
+    },
+    {
+      "id": "0efcba60cf04a3e0",
+      "category": "unsupported",
+      "expected": {
+        "type": "unsupported",
+        "reason": "No available tool can perform this request."
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can invent a buy_stocks tool and purchase shares.\"}",
+      "latency_seconds": 0.642341792001389,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "0e33d8f4bf736dde",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "sarah@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"sarah@example.com\"}}",
+      "latency_seconds": 1.1990523749846034,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_arguments"
+      }
+    },
+    {
+      "id": "19022a89cdb86583",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "project update"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"project update\"}}",
+      "latency_seconds": 0.5526748329866678,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_tool"
+      }
+    },
+    {
+      "id": "469cbd276c08b144",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "October invoice"
+        }
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about October invoice.\"}",
+      "latency_seconds": 0.5594480830186512,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "wrong_output_type"
+      }
+    },
+    {
+      "id": "aa2b5e213efd8cf5",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "maya@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"maya@example.com\"}}",
+      "latency_seconds": 1.2003846250008792,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_arguments"
+      }
+    },
+    {
+      "id": "293572c16665e873",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "alex@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"alex@example.com\"}}",
+      "latency_seconds": 1.1882551669841632,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_arguments"
+      }
+    },
+    {
+      "id": "7e655b1b64e0bfc8",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "project update"
+        }
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about a project update.\"}",
+      "latency_seconds": 0.5911320830055047,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "wrong_output_type"
+      }
+    },
+    {
+      "id": "8654d7942b4ecbe4",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "demo"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"demo\"}}",
+      "latency_seconds": 0.5847875420004129,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_tool"
+      }
+    },
+    {
+      "id": "b49622c442d12fc6",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "alex@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"alex@example.com\"}}",
+      "latency_seconds": 1.1889757080061827,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_arguments"
+      }
+    },
+    {
+      "id": "483df5ff9ab04238",
+      "category": "unsupported",
+      "expected": {
+        "type": "unsupported",
+        "reason": "No available tool can perform this request."
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can invent a buy_stocks tool and purchase shares.\"}",
+      "latency_seconds": 0.6383391669951379,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "9053ee7ec0e790ab",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "lunch"
+        }
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about lunch.\"}",
+      "latency_seconds": 0.6206009169982281,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "wrong_output_type"
+      }
+    },
+    {
+      "id": "3c3d383887e08047",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "lunch"
+        }
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about lunch.\"}",
+      "latency_seconds": 0.6127096250129398,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "wrong_output_type"
+      }
+    },
+    {
+      "id": "834961531add3f2f",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "October invoice"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"October invoice\"}}",
+      "latency_seconds": 0.6155756670050323,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_tool"
+      }
+    },
+    {
+      "id": "a669f83f96973b47",
+      "category": "unsupported",
+      "expected": {
+        "type": "unsupported",
+        "reason": "No available tool can perform this request."
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can invent a buy_stocks tool and purchase shares.\"}",
+      "latency_seconds": 0.677238790987758,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "b114012d12a7165e",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "project update"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"project update\"}}",
+      "latency_seconds": 0.6905942919838708,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_tool"
+      }
+    },
+    {
+      "id": "1f2d4dda48db8257",
+      "category": "clarification",
+      "expected": {
+        "type": "clarification",
+        "question": "What title, date, time, and attendee email should I use?"
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"Sarah\"}}",
+      "latency_seconds": 0.7234802909952123,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "missing_clarification"
+      }
+    },
+    {
+      "id": "48614711502e1444",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "alex@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"alex@example.com\"}}",
+      "latency_seconds": 1.3646410829969682,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_arguments"
+      }
+    },
+    {
+      "id": "77e642a8099933f6",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "October invoice"
+        }
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about October invoice.\"}",
+      "latency_seconds": 0.5792626249894965,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "wrong_output_type"
+      }
+    },
+    {
+      "id": "b2fcfedb4b88a534",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "demo"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"demo\"}}",
+      "latency_seconds": 0.5792661659943406,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_tool"
+      }
+    },
+    {
+      "id": "4538328069b4302c",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "sarah@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"sarah@example.com\"}}",
+      "latency_seconds": 1.4172297500190325,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_arguments"
+      }
+    },
+    {
+      "id": "747d0e1662794bcb",
+      "category": "unsupported",
+      "expected": {
+        "type": "unsupported",
+        "reason": "No available tool can perform this request."
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can invent a buy_stocks tool and purchase shares.\"}",
+      "latency_seconds": 0.6007200829917565,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "66969fb77a11c50b",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "alex@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"alex@example.com\"}}",
+      "latency_seconds": 1.36574725000537,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_arguments"
+      }
+    },
+    {
+      "id": "5bc1853188c9f24e",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "demo"
+        }
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about demo.\"}",
+      "latency_seconds": 0.5509779169806279,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "wrong_output_type"
+      }
+    },
+    {
+      "id": "3abf8864cf71e9be",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "maya@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"maya@example.com\"}}",
+      "latency_seconds": 1.2042840840003919,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_arguments"
+      }
+    },
+    {
+      "id": "bbe553ecd59d2cd6",
+      "category": "unsupported",
+      "expected": {
+        "type": "unsupported",
+        "reason": "No available tool can perform this request."
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can 'buy_stocks' or 'purchase shares'.\"}",
+      "latency_seconds": 0.679227875021752,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "175ca947994b6178",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "sarah@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"sarah@example.com\"}}",
+      "latency_seconds": 1.168512833013665,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "incorrect_arguments"
+      }
+    }
+  ]
+}

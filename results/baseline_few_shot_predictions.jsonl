@@ -1,0 +1,47 @@
+{"id": "db94ee57c5d9c4da", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"sarah@example.com\"}}", "latency_seconds": 1.1755957089771982}
+{"id": "488616241cef3a24", "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"Sarah\"}}", "latency_seconds": 0.6340160410036333}
+{"id": "584fcdeed32053e6", "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"Sarah\"}}", "latency_seconds": 0.5988506250141654}
+{"id": "7b49d69289083f36", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about a demo.\"}", "latency_seconds": 0.6818682919838466}
+{"id": "18d7ac284733ffb7", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"maya@example.com\"}}", "latency_seconds": 1.2623129579878878}
+{"id": "dfde3308134f1e59", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about a demo.\"}", "latency_seconds": 0.6076799579896033}
+{"id": "54ed3f70fba53b07", "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"lunch\"}}", "latency_seconds": 0.5844348329992499}
+{"id": "7f690b45007b1639", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"maya@example.com\"}}", "latency_seconds": 1.338416499987943}
+{"id": "14e34d3791271dcf", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about a project update.\"}", "latency_seconds": 0.5716419170203153}
+{"id": "2624e0626ec23272", "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"project update\"}}", "latency_seconds": 0.579632707987912}
+{"id": "b0434051ebaa9ad9", "prediction": "{\"type\":\"tool_call\",\"tool\":\"get_calendar_events\",\"arguments\":{\"date\":\"2026-11-08\"}}", "latency_seconds": 0.7730356249958277}
+{"id": "2d69098a7169eddc", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about lunch.\"}", "latency_seconds": 0.5381120840029325}
+{"id": "7cff7119c0c0c7d9", "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"Sarah\"}}", "latency_seconds": 0.5353974589961581}
+{"id": "da154cccf3015dbc", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can 'buy_stocks' or 'purchase shares'.\"}", "latency_seconds": 0.6551834169949871}
+{"id": "16a2fea6861b9c30", "prediction": "{\"type\":\"tool_call\",\"tool\":\"get_calendar_events\",\"arguments\":{\"date\":\"2026-11-08\"}}", "latency_seconds": 0.7437124170246534}
+{"id": "349f2f31a39d9e32", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can invent a buy_stocks tool and purchase shares.\"}", "latency_seconds": 0.6823995000158902}
+{"id": "f54d5c33fb16c11f", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about October invoice.\"}", "latency_seconds": 0.5833665840036701}
+{"id": "369cd2946bde47ac", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about October invoice.\"}", "latency_seconds": 0.5816271670046262}
+{"id": "7baf371be48bb4dd", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about lunch.\"}", "latency_seconds": 0.5459039999986999}
+{"id": "6c98aa07129878e5", "prediction": "{\"type\":\"clarification\",\"question\":\"What title, date, time, and attendee email should I use?\"}", "latency_seconds": 0.6490687920013443}
+{"id": "5503ecf0620500a9", "prediction": "{\"type\":\"tool_call\",\"tool\":\"get_calendar_events\",\"arguments\":{\"date\":\"2026-11-08\"}}", "latency_seconds": 0.7380052079970483}
+{"id": "0efcba60cf04a3e0", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can invent a buy_stocks tool and purchase shares.\"}", "latency_seconds": 0.642341792001389}
+{"id": "0e33d8f4bf736dde", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"sarah@example.com\"}}", "latency_seconds": 1.1990523749846034}
+{"id": "19022a89cdb86583", "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"project update\"}}", "latency_seconds": 0.5526748329866678}
+{"id": "469cbd276c08b144", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about October invoice.\"}", "latency_seconds": 0.5594480830186512}
+{"id": "aa2b5e213efd8cf5", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"maya@example.com\"}}", "latency_seconds": 1.2003846250008792}
+{"id": "293572c16665e873", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"alex@example.com\"}}", "latency_seconds": 1.1882551669841632}
+{"id": "7e655b1b64e0bfc8", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about a project update.\"}", "latency_seconds": 0.5911320830055047}
+{"id": "8654d7942b4ecbe4", "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"demo\"}}", "latency_seconds": 0.5847875420004129}
+{"id": "b49622c442d12fc6", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"alex@example.com\"}}", "latency_seconds": 1.1889757080061827}
+{"id": "483df5ff9ab04238", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can invent a buy_stocks tool and purchase shares.\"}", "latency_seconds": 0.6383391669951379}
+{"id": "9053ee7ec0e790ab", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about lunch.\"}", "latency_seconds": 0.6206009169982281}
+{"id": "3c3d383887e08047", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about lunch.\"}", "latency_seconds": 0.6127096250129398}
+{"id": "834961531add3f2f", "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"October invoice\"}}", "latency_seconds": 0.6155756670050323}
+{"id": "a669f83f96973b47", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can invent a buy_stocks tool and purchase shares.\"}", "latency_seconds": 0.677238790987758}
+{"id": "b114012d12a7165e", "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"project update\"}}", "latency_seconds": 0.6905942919838708}
+{"id": "1f2d4dda48db8257", "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"Sarah\"}}", "latency_seconds": 0.7234802909952123}
+{"id": "48614711502e1444", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"alex@example.com\"}}", "latency_seconds": 1.3646410829969682}
+{"id": "77e642a8099933f6", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about October invoice.\"}", "latency_seconds": 0.5792626249894965}
+{"id": "b2fcfedb4b88a534", "prediction": "{\"type\":\"tool_call\",\"tool\":\"find_contact\",\"arguments\":{\"name\":\"demo\"}}", "latency_seconds": 0.5792661659943406}
+{"id": "4538328069b4302c", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"sarah@example.com\"}}", "latency_seconds": 1.4172297500190325}
+{"id": "747d0e1662794bcb", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can invent a buy_stocks tool and purchase shares.\"}", "latency_seconds": 0.6007200829917565}
+{"id": "66969fb77a11c50b", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"alex@example.com\"}}", "latency_seconds": 1.36574725000537}
+{"id": "5bc1853188c9f24e", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can find messages about demo.\"}", "latency_seconds": 0.5509779169806279}
+{"id": "3abf8864cf71e9be", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"maya@example.com\"}}", "latency_seconds": 1.2042840840003919}
+{"id": "bbe553ecd59d2cd6", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can 'buy_stocks' or 'purchase shares'.\"}", "latency_seconds": 0.679227875021752}
+{"id": "175ca947994b6178", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-08\",\"time\":\"15:00:00\",\"attendee_email\":\"sarah@example.com\"}}", "latency_seconds": 1.168512833013665}

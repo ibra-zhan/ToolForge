@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+.coverage
+.DS_Store
+artifacts/adapters/*
+!artifacts/adapters/.gitkeep
+data/train.jsonl
+data/validation.jsonl
+data/test.jsonl
+data/challenge.jsonl
+*.egg-info/
