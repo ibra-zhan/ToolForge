@@ -42,6 +42,12 @@ The first experiment compares the same Qwen3-0.6B model in three configurations:
 
 All configurations use the same tool definitions, held-out examples, deterministic decoding, and scoring rules.
 
+## Measured result
+
+On the 47-example held-out test set, full-decision accuracy increased from **4.26% zero-shot** and **17.02% few-shot** to **57.45% with the fine-tuned adapter**. Fine-tuning also achieved 100% schema validity and raised exact argument accuracy from 0% to 37.50%.
+
+The adapter's main remaining failure is over-clarification: it handled all required clarification and unsupported cases correctly, but asked an unnecessary follow-up question on 20 of the 32 valid tool requests. See [`results/comparison.md`](results/comparison.md) for the complete metrics and error analysis.
+
 ## Quick start: local foundation
 
 The local dataset and tests do not require a GPU.
@@ -137,6 +143,7 @@ The first request can take time because model weights must be downloaded and loa
 ## Current limitations
 
 - The synthetic language is intentionally controlled; real user language will be messier.
+- The 47-example held-out test set makes this a proof of concept, not a production benchmark.
+- The fine-tuned model completed only 12 of 32 valid tool calls and over-clarified the other 20.
 - Clarification and unsupported scoring checks the decision type, not exact wording.
 - The mock tools do not access real email, calendar, contacts, or weather services.
-- Zero-shot and few-shot baseline metrics are included; fine-tuned metrics remain pending until GPU training completes.

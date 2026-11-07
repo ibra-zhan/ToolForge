@@ -1,0 +1,1157 @@
+{
+  "summary": {
+    "count": 47,
+    "metrics": {
+      "schema_valid": 1,
+      "output_type_correct": 0.574468085106383,
+      "full_decision_correct": 0.574468085106383,
+      "hallucinated_tool": 0,
+      "tool_correct": 0.375,
+      "arguments_exact": 0.375,
+      "clarification_correct": 1,
+      "unsupported_correct": 1,
+      "latency_seconds_mean": 2.79370568257489
+    },
+    "errors": {
+      "unnecessary_clarification": 20
+    },
+    "by_category": {
+      "valid": {
+        "count": 32,
+        "schema_valid": 1,
+        "full_decision_correct": 0.375
+      },
+      "clarification": {
+        "count": 8,
+        "schema_valid": 1,
+        "full_decision_correct": 1
+      },
+      "unsupported": {
+        "count": 7,
+        "schema_valid": 1,
+        "full_decision_correct": 1
+      }
+    }
+  },
+  "records": [
+    {
+      "id": "db94ee57c5d9c4da",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "sarah@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"sarah@example.com\"}}",
+      "latency_seconds": 10.173028457997134,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": true,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "488616241cef3a24",
+      "category": "clarification",
+      "expected": {
+        "type": "clarification",
+        "question": "What title, date, time, and attendee email should I use?"
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"What time should the event be scheduled?\"}",
+      "latency_seconds": 2.7049435419903602,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": true,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "584fcdeed32053e6",
+      "category": "clarification",
+      "expected": {
+        "type": "clarification",
+        "question": "What title, date, time, and attendee email should I use?"
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"What time would you like Sarah to attend?\"}",
+      "latency_seconds": 6.1005958750029095,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": true,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "7b49d69289083f36",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "demo"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for messages about the demo?\"}",
+      "latency_seconds": 4.440514959016582,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "18d7ac284733ffb7",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "maya@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"maya@example.com\"}}",
+      "latency_seconds": 12.68449949999922,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": true,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "dfde3308134f1e59",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "demo"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"What subject and message should I use for the demo?\"}",
+      "latency_seconds": 4.299209332995815,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "54ed3f70fba53b07",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "lunch"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for lunch messages?\"}",
+      "latency_seconds": 3.5073733330063988,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "7f690b45007b1639",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "maya@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"maya@example.com\"}}",
+      "latency_seconds": 7.4947557499981485,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": true,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "14e34d3791271dcf",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "project update"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for project update messages?\"}",
+      "latency_seconds": 3.8469256660027895,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "2624e0626ec23272",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "project update"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which specific messages should I look for regarding the project update?\"}",
+      "latency_seconds": 3.464635917014675,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "b0434051ebaa9ad9",
+      "category": "clarification",
+      "expected": {
+        "type": "clarification",
+        "question": "What title, date, time, and attendee email should I use?"
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"What time should the event be scheduled?\"}",
+      "latency_seconds": 3.968965542007936,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": true,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "2d69098a7169eddc",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "lunch"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for lunch messages?\"}",
+      "latency_seconds": 3.780081707984209,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "7cff7119c0c0c7d9",
+      "category": "clarification",
+      "expected": {
+        "type": "clarification",
+        "question": "What title, date, time, and attendee email should I use?"
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"What time would you like Sarah to attend?\"}",
+      "latency_seconds": 4.899390500009758,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": true,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "da154cccf3015dbc",
+      "category": "unsupported",
+      "expected": {
+        "type": "unsupported",
+        "reason": "No available tool can perform this request."
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can perform this request.\"}",
+      "latency_seconds": 3.7145557080220897,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "16a2fea6861b9c30",
+      "category": "clarification",
+      "expected": {
+        "type": "clarification",
+        "question": "What title, date, time, and attendee email should I use?"
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"What time should I schedule the event?\"}",
+      "latency_seconds": 1.3677171249873936,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": true,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "349f2f31a39d9e32",
+      "category": "unsupported",
+      "expected": {
+        "type": "unsupported",
+        "reason": "No available tool can perform this request."
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can perform this request.\"}",
+      "latency_seconds": 1.1082699999969918,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "f54d5c33fb16c11f",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "October invoice"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for the October invoice?\"}",
+      "latency_seconds": 1.2111182090011425,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "369cd2946bde47ac",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "October invoice"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for October invoice messages?\"}",
+      "latency_seconds": 1.3255170000193175,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "7baf371be48bb4dd",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "lunch"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for lunch messages?\"}",
+      "latency_seconds": 1.18453829101054,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "6c98aa07129878e5",
+      "category": "clarification",
+      "expected": {
+        "type": "clarification",
+        "question": "What title, date, time, and attendee email should I use?"
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"What time should the event be scheduled?\"}",
+      "latency_seconds": 1.1350648750085384,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": true,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "5503ecf0620500a9",
+      "category": "clarification",
+      "expected": {
+        "type": "clarification",
+        "question": "What title, date, time, and attendee email should I use?"
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"What time should the event be scheduled?\"}",
+      "latency_seconds": 1.1350232920085546,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": true,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "0efcba60cf04a3e0",
+      "category": "unsupported",
+      "expected": {
+        "type": "unsupported",
+        "reason": "No available tool can perform this request."
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can perform this request.\"}",
+      "latency_seconds": 1.1219810410111677,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "0e33d8f4bf736dde",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "sarah@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"sarah@example.com\"}}",
+      "latency_seconds": 2.9852707919781096,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": true,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "19022a89cdb86583",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "project update"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which specific messages should I look for?\"}",
+      "latency_seconds": 1.2036489169986453,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "469cbd276c08b144",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "October invoice"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for the October invoice?\"}",
+      "latency_seconds": 1.3432818750152364,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "aa2b5e213efd8cf5",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "maya@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"maya@example.com\"}}",
+      "latency_seconds": 3.1865881249832455,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": true,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "293572c16665e873",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "alex@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"alex@example.com\"}}",
+      "latency_seconds": 2.9375484159972984,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": true,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "7e655b1b64e0bfc8",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "project update"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which specific messages should I look for regarding the project update?\"}",
+      "latency_seconds": 1.3593438749958295,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "8654d7942b4ecbe4",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "demo"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for messages about the demo?\"}",
+      "latency_seconds": 1.381775916001061,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "b49622c442d12fc6",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "alex@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"alex@example.com\"}}",
+      "latency_seconds": 2.981949207984144,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": true,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "483df5ff9ab04238",
+      "category": "unsupported",
+      "expected": {
+        "type": "unsupported",
+        "reason": "No available tool can perform this request."
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can perform this request.\"}",
+      "latency_seconds": 1.1948204160144087,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "9053ee7ec0e790ab",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "lunch"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for lunch messages?\"}",
+      "latency_seconds": 1.2185851660033222,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "3c3d383887e08047",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "lunch"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for lunch messages?\"}",
+      "latency_seconds": 1.2147971249942202,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "834961531add3f2f",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "October invoice"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for October invoice messages?\"}",
+      "latency_seconds": 1.23736154101789,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "a669f83f96973b47",
+      "category": "unsupported",
+      "expected": {
+        "type": "unsupported",
+        "reason": "No available tool can perform this request."
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can perform this request.\"}",
+      "latency_seconds": 1.1405272500123829,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "b114012d12a7165e",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "project update"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which messages should I look for regarding the project update?\"}",
+      "latency_seconds": 1.3926452080195304,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "1f2d4dda48db8257",
+      "category": "clarification",
+      "expected": {
+        "type": "clarification",
+        "question": "What title, date, time, and attendee email should I use?"
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"What time would you like Sarah to attend?\"}",
+      "latency_seconds": 1.2328627920069266,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": true,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "48614711502e1444",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "alex@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"alex@example.com\"}}",
+      "latency_seconds": 3.0556218329875264,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": true,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "77e642a8099933f6",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "October invoice"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I use for the October invoice?\"}",
+      "latency_seconds": 1.2711978339939378,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "b2fcfedb4b88a534",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "demo"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which messages should I look for?\"}",
+      "latency_seconds": 1.142783249990316,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "4538328069b4302c",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "sarah@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"sarah@example.com\"}}",
+      "latency_seconds": 3.005295083974488,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": true,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "747d0e1662794bcb",
+      "category": "unsupported",
+      "expected": {
+        "type": "unsupported",
+        "reason": "No available tool can perform this request."
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can perform this request.\"}",
+      "latency_seconds": 1.1022678329900373,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "66969fb77a11c50b",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "alex@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"alex@example.com\"}}",
+      "latency_seconds": 2.893514875002438,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": true,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "5bc1853188c9f24e",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "search_emails",
+        "arguments": {
+          "query": "demo"
+        }
+      },
+      "prediction": "{\"type\":\"clarification\",\"question\":\"Which specific messages should I look for?\"}",
+      "latency_seconds": 1.2064638749870937,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": false,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": false,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": "unnecessary_clarification"
+      }
+    },
+    {
+      "id": "3abf8864cf71e9be",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "maya@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"maya@example.com\"}}",
+      "latency_seconds": 2.9237904170004185,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": true,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": null
+      }
+    },
+    {
+      "id": "bbe553ecd59d2cd6",
+      "category": "unsupported",
+      "expected": {
+        "type": "unsupported",
+        "reason": "No available tool can perform this request."
+      },
+      "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can perform this request.\"}",
+      "latency_seconds": 1.168098583992105,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": false,
+        "arguments_exact": false,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": true,
+        "error": null
+      }
+    },
+    {
+      "id": "175ca947994b6178",
+      "category": "valid",
+      "expected": {
+        "type": "tool_call",
+        "tool": "create_calendar_event",
+        "arguments": {
+          "title": "Demo review",
+          "date": "2026-11-13",
+          "time": "15:00:00",
+          "attendee_email": "sarah@example.com"
+        }
+      },
+      "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"sarah@example.com\"}}",
+      "latency_seconds": 2.8554212499875575,
+      "scores": {
+        "schema_valid": true,
+        "output_type_correct": true,
+        "tool_correct": true,
+        "arguments_exact": true,
+        "full_decision_correct": true,
+        "hallucinated_tool": false,
+        "clarification_correct": false,
+        "unsupported_correct": false,
+        "error": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{"id": "db94ee57c5d9c4da", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"sarah@example.com\"}}", "latency_seconds": 10.173028457997134}
+{"id": "488616241cef3a24", "prediction": "{\"type\":\"clarification\",\"question\":\"What time should the event be scheduled?\"}", "latency_seconds": 2.7049435419903602}
+{"id": "584fcdeed32053e6", "prediction": "{\"type\":\"clarification\",\"question\":\"What time would you like Sarah to attend?\"}", "latency_seconds": 6.1005958750029095}
+{"id": "7b49d69289083f36", "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for messages about the demo?\"}", "latency_seconds": 4.440514959016582}
+{"id": "18d7ac284733ffb7", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"maya@example.com\"}}", "latency_seconds": 12.68449949999922}
+{"id": "dfde3308134f1e59", "prediction": "{\"type\":\"clarification\",\"question\":\"What subject and message should I use for the demo?\"}", "latency_seconds": 4.299209332995815}
+{"id": "54ed3f70fba53b07", "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for lunch messages?\"}", "latency_seconds": 3.5073733330063988}
+{"id": "7f690b45007b1639", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"maya@example.com\"}}", "latency_seconds": 7.4947557499981485}
+{"id": "14e34d3791271dcf", "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for project update messages?\"}", "latency_seconds": 3.8469256660027895}
+{"id": "2624e0626ec23272", "prediction": "{\"type\":\"clarification\",\"question\":\"Which specific messages should I look for regarding the project update?\"}", "latency_seconds": 3.464635917014675}
+{"id": "b0434051ebaa9ad9", "prediction": "{\"type\":\"clarification\",\"question\":\"What time should the event be scheduled?\"}", "latency_seconds": 3.968965542007936}
+{"id": "2d69098a7169eddc", "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for lunch messages?\"}", "latency_seconds": 3.780081707984209}
+{"id": "7cff7119c0c0c7d9", "prediction": "{\"type\":\"clarification\",\"question\":\"What time would you like Sarah to attend?\"}", "latency_seconds": 4.899390500009758}
+{"id": "da154cccf3015dbc", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can perform this request.\"}", "latency_seconds": 3.7145557080220897}
+{"id": "16a2fea6861b9c30", "prediction": "{\"type\":\"clarification\",\"question\":\"What time should I schedule the event?\"}", "latency_seconds": 1.3677171249873936}
+{"id": "349f2f31a39d9e32", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can perform this request.\"}", "latency_seconds": 1.1082699999969918}
+{"id": "f54d5c33fb16c11f", "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for the October invoice?\"}", "latency_seconds": 1.2111182090011425}
+{"id": "369cd2946bde47ac", "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for October invoice messages?\"}", "latency_seconds": 1.3255170000193175}
+{"id": "7baf371be48bb4dd", "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for lunch messages?\"}", "latency_seconds": 1.18453829101054}
+{"id": "6c98aa07129878e5", "prediction": "{\"type\":\"clarification\",\"question\":\"What time should the event be scheduled?\"}", "latency_seconds": 1.1350648750085384}
+{"id": "5503ecf0620500a9", "prediction": "{\"type\":\"clarification\",\"question\":\"What time should the event be scheduled?\"}", "latency_seconds": 1.1350232920085546}
+{"id": "0efcba60cf04a3e0", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can perform this request.\"}", "latency_seconds": 1.1219810410111677}
+{"id": "0e33d8f4bf736dde", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"sarah@example.com\"}}", "latency_seconds": 2.9852707919781096}
+{"id": "19022a89cdb86583", "prediction": "{\"type\":\"clarification\",\"question\":\"Which specific messages should I look for?\"}", "latency_seconds": 1.2036489169986453}
+{"id": "469cbd276c08b144", "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for the October invoice?\"}", "latency_seconds": 1.3432818750152364}
+{"id": "aa2b5e213efd8cf5", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"maya@example.com\"}}", "latency_seconds": 3.1865881249832455}
+{"id": "293572c16665e873", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"alex@example.com\"}}", "latency_seconds": 2.9375484159972984}
+{"id": "7e655b1b64e0bfc8", "prediction": "{\"type\":\"clarification\",\"question\":\"Which specific messages should I look for regarding the project update?\"}", "latency_seconds": 1.3593438749958295}
+{"id": "8654d7942b4ecbe4", "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for messages about the demo?\"}", "latency_seconds": 1.381775916001061}
+{"id": "b49622c442d12fc6", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"alex@example.com\"}}", "latency_seconds": 2.981949207984144}
+{"id": "483df5ff9ab04238", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can perform this request.\"}", "latency_seconds": 1.1948204160144087}
+{"id": "9053ee7ec0e790ab", "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for lunch messages?\"}", "latency_seconds": 1.2185851660033222}
+{"id": "3c3d383887e08047", "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for lunch messages?\"}", "latency_seconds": 1.2147971249942202}
+{"id": "834961531add3f2f", "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I check for October invoice messages?\"}", "latency_seconds": 1.23736154101789}
+{"id": "a669f83f96973b47", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can perform this request.\"}", "latency_seconds": 1.1405272500123829}
+{"id": "b114012d12a7165e", "prediction": "{\"type\":\"clarification\",\"question\":\"Which messages should I look for regarding the project update?\"}", "latency_seconds": 1.3926452080195304}
+{"id": "1f2d4dda48db8257", "prediction": "{\"type\":\"clarification\",\"question\":\"What time would you like Sarah to attend?\"}", "latency_seconds": 1.2328627920069266}
+{"id": "48614711502e1444", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"alex@example.com\"}}", "latency_seconds": 3.0556218329875264}
+{"id": "77e642a8099933f6", "prediction": "{\"type\":\"clarification\",\"question\":\"Which date should I use for the October invoice?\"}", "latency_seconds": 1.2711978339939378}
+{"id": "b2fcfedb4b88a534", "prediction": "{\"type\":\"clarification\",\"question\":\"Which messages should I look for?\"}", "latency_seconds": 1.142783249990316}
+{"id": "4538328069b4302c", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"sarah@example.com\"}}", "latency_seconds": 3.005295083974488}
+{"id": "747d0e1662794bcb", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can perform this request.\"}", "latency_seconds": 1.1022678329900373}
+{"id": "66969fb77a11c50b", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"alex@example.com\"}}", "latency_seconds": 2.893514875002438}
+{"id": "5bc1853188c9f24e", "prediction": "{\"type\":\"clarification\",\"question\":\"Which specific messages should I look for?\"}", "latency_seconds": 1.2064638749870937}
+{"id": "3abf8864cf71e9be", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"maya@example.com\"}}", "latency_seconds": 2.9237904170004185}
+{"id": "bbe553ecd59d2cd6", "prediction": "{\"type\":\"unsupported\",\"reason\":\"No available tool can perform this request.\"}", "latency_seconds": 1.168098583992105}
+{"id": "175ca947994b6178", "prediction": "{\"type\":\"tool_call\",\"tool\":\"create_calendar_event\",\"arguments\":{\"title\":\"Demo review\",\"date\":\"2026-11-13\",\"time\":\"15:00:00\",\"attendee_email\":\"sarah@example.com\"}}", "latency_seconds": 2.8554212499875575}
