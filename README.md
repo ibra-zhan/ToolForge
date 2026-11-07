@@ -74,6 +74,8 @@ toolforge-generate --total 420
 toolforge-train
 ```
 
+The training dependency ranges are intentionally pinned, including TRL 0.21.0 and Transformers 4.x. This keeps the documented `SFTConfig` interface reproducible instead of silently adopting breaking API changes from future releases.
+
 The important defaults live in [`configs/training.yaml`](configs/training.yaml): 4-bit NF4 weights, LoRA rank 16, three epochs, assistant-response-only loss, and fixed seed 42. The resulting adapter is written under `artifacts/adapters/` and is intentionally ignored by Git.
 
 The 0.6B model is deliberately chosen so the first end-to-end experiment finishes cheaply. If the run is stable and more GPU memory and disk space are available, repeat the experiment with Qwen3-1.7B or 4B; never compare a base model and adapter built from different model sizes.
