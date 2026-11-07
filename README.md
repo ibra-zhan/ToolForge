@@ -61,6 +61,13 @@ The generator uses a fixed reference date of `2026-11-07` and timezone `America/
 
 Training is intended for Google Colab or another machine with a compatible NVIDIA GPU. In a Colab terminal or notebook:
 
+1. Create an upload bundle on your Mac with `git archive --format=zip --output=toolforge-colab.zip HEAD`.
+2. Open `notebooks/train_colab.ipynb` in Google Colab.
+3. Select **Runtime → Change runtime type → T4 GPU**.
+4. Run the cells in order. When prompted, upload `toolforge-colab.zip`.
+
+The notebook unpacks the project, installs its training dependencies, regenerates and validates the dataset, then starts QLoRA training. The equivalent commands are:
+
 ```bash
 pip install -e '.[training]'
 toolforge-generate --total 420
